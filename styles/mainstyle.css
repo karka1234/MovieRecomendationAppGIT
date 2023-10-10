@@ -1,0 +1,47 @@
+/* css for a whole page */
+body {
+    background-image: url('https://media.istockphoto.com/id/1019106924/photo/vintage-tv-with-static-on-white-wooden-background.jpg?s=612x612&w=0&k=20&c=WXfN2zk_udDz_fnYbu9sNB4ODDWdSwUolsULpIlYfOc=');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: none;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  li a:hover {
+    background-color: #706e6e;
+  }
+
+
+/*css for form */
+ form {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+ }
+
+ #getRecomendationsButton {
+    background-color: red;
+ }
