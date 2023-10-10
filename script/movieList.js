@@ -69,7 +69,7 @@ function loader(){
     updateHtmlSide();
 }
 let movieList = []; // filmu listas
-loader();//page loader 
+loader();//page loader / uzloadina lista / ir default filmu reiksmes jei pas vartotoja dar nera
 
 const addMoveiButton = document.querySelector("#addMovie");
 addMoveiButton.addEventListener("click", ()=> {
