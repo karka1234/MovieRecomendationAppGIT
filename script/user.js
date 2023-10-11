@@ -10,7 +10,8 @@ window.addEventListener("load",()=> {
         const users = JSON.parse(storedUsers);
 
     
-    const user = {
+    const user = 
+    {
       firstName: firstName,
       lastName: lastName,
       email: email,

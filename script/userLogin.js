@@ -1,6 +1,6 @@
 window.addEventListener("load",()=> {
-    const form= document.querySelector("form")
-    form.addEventListener("submit", ()=>{
+    const form= document.querySelector("form");
+    form.addEventListener("submit", ()=> {
         const password = document.querySelector("#password").value;
         const email = document.querySelector("#email").value;
         const userList = localStorage.getItem("users") || "[]";
