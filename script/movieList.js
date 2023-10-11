@@ -3,14 +3,14 @@ function pushDefaultMoviesToLocalStorage(moviesToPush){
     console.log(JSON.stringify(moviesToPush));
 }
 function Movie(name, genre, year, rating, imgSrc = ""){ //filmo objektas
-    if(typeof(name) != "string" && name === "")
-        return;
-    if(typeof(genre) != "string" && genre === "")
-        return;
-    if(typeof(year) != "number" && year === 0)
-        return;
-    if(typeof(rating) != "number" && rating === 0)
-        return;
+    // if(typeof(name) != "string" && name === "")
+    //     return;
+    // if(typeof(genre) != "string" && genre === "")
+    //     return;
+    // if(typeof(year) != "number" && year === 0)
+    //     return;
+    // if(typeof(rating) != "number" && rating === 0)
+    //     return;
     this.name = name;
     this.genre = genre;
     this.year = year;
@@ -77,8 +77,11 @@ loader();//page loader / uzloadina lista / ir default filmu reiksmes jei pas var
 const addMoveiButton = document.querySelector("#addMovie");
 addMoveiButton.addEventListener("click", ()=> {
     let newMovie = AddMovieWithPromts();
-    movieList.push(newMovie);
-    pushDefaultMoviesToLocalStorage(movieList);
-    updateHtmlSide(movieList);
+    if(newMovie.name != "" && newMovie.genre != "" && newMovie.year != "" && newMovie.rating!= "")
+    {
+        movieList.push(newMovie);
+        pushDefaultMoviesToLocalStorage(movieList);
+        updateHtmlSide(movieList);
+    }
 });
 
