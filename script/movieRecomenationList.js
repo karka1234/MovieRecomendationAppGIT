@@ -3,6 +3,7 @@ let movieList = JSON.parse(localStorage.movieList);
 function updateHtmlSideIndexPageRecomendations(movieObjectsList){
     const showMovieElement = document.querySelector(".showMovies");
     const moviesListElement = document.querySelector(".moviesList");
+
     movieObjectsList.forEach((item) => { //img dar dadesiu gal
         let newElement = document.createElement('li');
         newElement.className = "movieLiElement";
@@ -32,20 +33,16 @@ function filterList(movieObjectsList){
     let genreFielt = document.querySelector("#genre");
     let releaseYearFielt = document.querySelector("#year");
     let ratingFielt = document.querySelector("#rating");
-    let newArray = movieObjectsList.filter(function (el) {
-        return el.genre == genreFielt.value  && el.year == releaseYearFielt.value && Math.round(el.rating) == +ratingFielt.value;               
+    return movieObjectsList.filter(function (el) {
+        if(genreFielt.value != "" && releaseYearFielt.value != "" && ratingFielt != 1)        
+            return el.genre == genreFielt.value  && el.year == releaseYearFielt.value && Math.round(el.rating) == +ratingFielt.value;    
+        else
+            return el.genre == genreFielt.value  || el.year == releaseYearFielt.value || Math.round(el.rating) == +ratingFielt.value;             
     });
-    return newArray;
 }
-
-
 const btnRecomendations = document.querySelector("#getRecomendationsButton");
 btnRecomendations.addEventListener("click", ()=>{
     resetHtmlSideIndexPageRecomendations();
     let movieListFiltered = filterList(movieList);
     updateHtmlSideIndexPageRecomendations(movieListFiltered);
 });
-
-//updateHtmlSide(movieListFiltered);
-
-// return el.genre == genreFielt.value  && +el.year == +releaseYearFielt.value && +Math.round(el.rating) == +ratingFielt.value;           
