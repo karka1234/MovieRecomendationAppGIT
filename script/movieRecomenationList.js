@@ -20,27 +20,32 @@ function updateHtmlSideIndexPageRecomendations(movieObjectsList){
         newElement.append(movieName);
         newElement.append(movieDescription);
         newElement.append(movieRating);
-
-        showMovieElement.append(newElement);
+        moviesListElement.append(newElement);
+        showMovieElement.append(moviesListElement);
     });
+}
+function resetHtmlSideIndexPageRecomendations(){
+    const moviesListElement = document.querySelector(".moviesList");
+    moviesListElement.innerHTML="";
 }
 function filterList(movieObjectsList){
     let genreFielt = document.querySelector("#genre");
-    let releaseYearFielt = document.querySelector("#releaseYear");
+    let releaseYearFielt = document.querySelector("#year");
     let ratingFielt = document.querySelector("#rating");
-
-    let newArray = movieObjectsLists.filter(function (el) {
-            return el.genre == genreFielt.value;
+    let newArray = movieObjectsList.filter(function (el) {
+        return el.genre == genreFielt.value  && el.year == releaseYearFielt.value && Math.round(el.rating) == +ratingFielt.value;               
     });
-
     return newArray;
 }
 
 
 const btnRecomendations = document.querySelector("#getRecomendationsButton");
 btnRecomendations.addEventListener("click", ()=>{
+    resetHtmlSideIndexPageRecomendations();
     let movieListFiltered = filterList(movieList);
     updateHtmlSideIndexPageRecomendations(movieListFiltered);
 });
 
 //updateHtmlSide(movieListFiltered);
+
+// return el.genre == genreFielt.value  && +el.year == +releaseYearFielt.value && +Math.round(el.rating) == +ratingFielt.value;           
