@@ -26,10 +26,10 @@ function AddMovieWithPromts(){
         +prompt("Enter Movie rating"));
     return newMovie;
 }
-function updateHtmlSide(){
+function updateHtmlSide(movieObjectsList){
     const showMovieElement = document.querySelector(".showMovies");
     const moviesListElement = document.querySelector(".moviesList");
-    movieList.forEach((item) => { //img dar dadesiu gal
+    movieObjectsList.forEach((item) => { //img dar dadesiu gal
         let newElement = document.createElement('li');
         newElement.className = "movieLiElement";
         let movieName = document.createElement('h2');
@@ -66,7 +66,7 @@ function loader(){
         pushDefaultMoviesToLocalStorage(movieList); //hardkodintus filmus uzkrauna
     else
         movieList = JSON.parse(localStorage.movieList);
-    updateHtmlSide();
+    updateHtmlSide(movieList);
 }
 let movieList = []; // filmu listas
 loader();//page loader / uzloadina lista / ir default filmu reiksmes jei pas vartotoja dar nera
@@ -76,6 +76,6 @@ addMoveiButton.addEventListener("click", ()=> {
     let newMovie = AddMovieWithPromts();
     movieList.push(newMovie);
     pushDefaultMoviesToLocalStorage(movieList);
-    updateHtmlSide();
+    updateHtmlSide(movieList);
 });
 

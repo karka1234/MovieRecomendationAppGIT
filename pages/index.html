@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,300;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/movieList.css">
     <link rel="stylesheet" href="../styles/mainstyle.css">
 </head>
 <body>
@@ -42,10 +43,16 @@
                 <option value="10">10</option>
             </select><br>
             <br>
-            <input id="getRecomendationsButton" type="submit" value="Get Recommendations" href="recommendations.html">
+            <input id="getRecomendationsButton" type="submit" value="Get Recommendations">
         </form>
 
+    <br><br><br><br><br>
 
+        <div class="showMovies">
+            <ol class="moviesList"></ol>
+                <!-- movieLiElement  tai yra clase kuria naudoju movie " li "  elementams  -->
+        </div>
+    
         <SCRIPT type="text/javascript" SRC="../script/movieRecomenationList.js"></SCRIPT>
 </body>
 </html>
