@@ -5,12 +5,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit Movie</title>
+    <link rel="stylesheet" href="../styles/mainstyle.css">
+    <link rel="stylesheet" href="../styles/edit-moviestyle.css">
     <script src="../script/movieList.js" defer></script>
 </head>
 
 <body>
-
-<h2>Edit Movie Details</h2>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="movieList.html">Movie List</a></li>
+                <li><a href="edit-movie.html">Edit a Movie</a></li>
+                <li><a href="userRegistrationForm.html">User Registration</a></li>
+            </ul>
+        </nav>
+    </header>
+<div class="form-container">
+    <h2>Edit Movie Details</h2>
 
 <select id="editMovieDropdown" onchange="populateForm()">
     <!-- Options will be populated from movieList in localStorage -->
@@ -31,6 +43,8 @@
     </label><br>
     <button type="button" onclick="updateMovieDetails()">Update Movie</button>
 </form>
+</div>
+
 
 <script>
     document.addEventListener('DOMContentLoaded', function() {
