@@ -46,8 +46,8 @@ function updateHtmlSide(movieObjectsList){
         newElement.append(movieName);
         newElement.append(movieDescription);
         newElement.append(movieRating);
-
-        showMovieElement.append(newElement);
+        moviesListElement.append(newElement);
+        showMovieElement.append(moviesListElement);
     });
 }
 function loader(){
