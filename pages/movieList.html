@@ -4,11 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movie list</title>
-    <link rel="stylesheet" href="../styles/mainstyle.css">
-
     <link rel="stylesheet" href="../styles/movieList.css">
+    <link rel="stylesheet" href="../styles/mainstyle.css">
 </head>
 <body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="movieList.html">Movie List</a></li>
+                <li><a href="edit-movie.html">Edit a Movie</a></li>
+                <li><a href="userRegistrationForm.html">User Registration</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="button-container">
+        <input id="addMovie" type="button" value="Add movie">
+    </div>
+    
+
+    
     <h1>Movie List</h1>
 
     <div class="showMovies">
@@ -16,8 +31,7 @@
             <!-- movieLiElement  tai yra clase kuria naudoju movie " li "  elementams  -->
     </div>
 
-    <input id="addMovie" type="button" value="Add movie">
-
+    
 
     <SCRIPT type="text/javascript" SRC="../script/movieList.js"></SCRIPT>
 </body>

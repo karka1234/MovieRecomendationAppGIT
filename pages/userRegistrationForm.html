@@ -4,9 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Registration</title>
+    <link rel="stylesheet" href="../styles/mainstyle.css">
+    <link rel="stylesheet" href="../styles/userRegistratioStyle.css">
 </head>
 <body>
     <form action="" id="loginpage">
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="movieList.html">Movie List</a></li>
+                <li><a href="edit-movie.html">Edit a Movie</a></li>
+                <li><a href="userRegistrationForm.html">User Registration</a></li>
+            </ul>
+        </nav>
+    </header>
+    <form action="">
        <label for="fname">First Name:</label><br>
        <input type="text" id="fname" name="fname" value=""><br>
        <label for="lname">Last Name:</label><br>
@@ -15,7 +28,7 @@
        <input type="password" id="pwd" name="pwd" value=""><br>
        <label for="email">Enter your email:</label><br>
        <input type="email" id="email" name="email" value="" required><br>
-       <input type="submit" value="Register">
+       <input id="registerButton" type="submit" value="Register">
     </form>
     <script src="/script/user.js"></script>
 </body>
