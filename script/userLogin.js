@@ -11,6 +11,7 @@ window.addEventListener("load",()=> {
         if(existingUser)
         
         alert("Welcome "+ Userinfo)
+        window.location.href = "pages/UserProfile.html";
     })
 
     
