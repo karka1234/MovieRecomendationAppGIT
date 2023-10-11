@@ -41,5 +41,4 @@ function updateMovieDetails() {
     }
 
     pushDefaultMoviesToLocalStorage(movieList); // Update localStorage with edited details
-    alert('Movie details updated!');
 }
