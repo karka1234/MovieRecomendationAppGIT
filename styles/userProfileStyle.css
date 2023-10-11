@@ -1,5 +1,5 @@
 form  {
-    margin-top: 150px;
+    margin-top: 100px;
     color: white;
     display: flex;
     flex-direction: column;
@@ -29,8 +29,4 @@ form label input {
     color: black;
     transition-duration: 0.3s;
     font-weight: 600;
- }
- #Userinfo{
-   margin: 5px;
-    border: none;
  }
