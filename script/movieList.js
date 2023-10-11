@@ -26,6 +26,9 @@ function AddMovieWithPromts(){
         +prompt("Enter Movie rating"));
     return newMovie;
 }
+function GetCoverImage(){
+    
+}
 function updateHtmlSide(movieObjectsList){
     const showMovieElement = document.querySelector(".showMovies");
     const moviesListElement = document.querySelector(".moviesList");
